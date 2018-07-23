@@ -1,0 +1,147 @@
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+      <style>
+        table 
+        {
+            font-family: "Lato","sans-serif";
+        }
+        td
+        {
+            text-align: center;
+            width: 10em;
+            padding: 1em;
+        }
+        th
+        {
+            text-align: center;
+            padding: 1em;
+            background-color:blue;
+            color: white;
+        }
+        tr
+        {
+            height: 1em;
+        }
+        table tr:nth-child(even)
+        {
+            background-color: #eee;	
+        }
+        table tr:nth-child(odd) 
+        {
+            background-color:#fff;
+        }
+        h1 {
+            color: purple;
+        }
+        h2 {
+            color:blue;
+        }
+        hr { 
+    	   display: block;
+    	   margin-top: 0.5em;
+    	   margin-bottom: 0.5em;
+    	   margin-left: auto;
+    	   margin-right: auto;
+           border-color: #FFB6C1;
+    	   border-style: inset;
+    	   border-width: 1px;
+        }
+       .w3-button {
+		width:150px;
+        } 
+        #simpleform {
+             width: 25%;
+            padding: 12px 20px;
+             margin-right: 550px;
+             margin-left: 550px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+         }
+         #simpleform label {
+            width: 100px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 0px solid #ccc;
+            box-sizing: border-box;
+         }
+         #simpleform span {
+             width: 100%;
+             padding: 12px 20px;
+             margin: 8px 0;
+             display: inline-block;
+             border: 1px solid #ccc;
+             box-sizing: border-box;
+         }
+         #simpleform input {
+            width: 300px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+         }
+         #simpleform textarea {
+             width: 100px;
+             padding: 12px 20px;
+             margin: 8px 0;
+             display: inline-block;
+             border: 1px solid #ccc;
+             box-sizing: border-box;
+         }
+         #simpleform select {
+            margin: 0 0 20px 10px;
+         }
+         #simpleform button {
+             width: 100px;
+             background-color: blue;
+             color: white;
+             padding: 14px 20px;
+             margin: 8px 0;
+             border: none;
+             cursor: pointer;
+         }
+         .footer {
+             position: fixed;
+             left: 0;
+             bottom: 0;
+             width: 100%;
+             background-color:black;
+             color: white;
+             text-align: center;
+        }
+        .pagination {
+    		display: inline-block;
+  	}
+
+	.pagination a {
+    		color: black;
+    		float: left;
+    		padding: 8px 16px;
+    		text-decoration: none;
+    		transition: background-color .3s;
+	}
+
+	.pagination a.active {
+    		background-color: #4CAF50;
+    		color: white;
+	}
+	.pagination a:hover:not(.active) {
+		background-color: #ddd;
+	}
+        </style>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}  
+       <p> <div class="footer"><h3>Copyright &copy; 2018 College</h3></div></p>     
+    </div>
+    </body>
+</html

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+{% endblock %}
+{% block body %}
+<h1 align ="center">STUDENT DATABASE MANAGEMENT SYSYTEM</h2>
+<h2 align= "right"><a href = "{{ path('app_student_new') }}"><button> STUDENT REGISTER</button></a><h2>
+<hr>
+  <p> <h2 align ="center">UPDATE STUDENT DATA </h2></p>
+   <div>
+        <h2 align= "center"><a href = "{{ path('app_student_display') }}"><button>VIEW STUDENT</button></a><h2>
+   </div>
+   <div id = "simpleform" align= "center">
+      {{ form_start(form) }}
+      {{ form_widget(form) }}
+      {{ form_end(form) }}
+   </div>
+{% endblock %}
+

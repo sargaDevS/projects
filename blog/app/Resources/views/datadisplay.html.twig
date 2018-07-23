@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %} 
+{% block stylesheets %}
+{% endblock %}
+{% block body %}
+<h1 align ="center">STUDENT DATABASE MANAGEMENT SYSYTEM</h2>
+<h2 align ="right"><a href = "{{ path('app_student_new') }}"><button> STUDENT REGISTER</button></a><h2>
+<hr>
+<p><h2 align ="center">VIEW STUDENT DATA </h2></p>
+<div class= "count">
+    Count : {{ pagination.getTotalItemCount }}
+</div>
+<div align= "right">
+    <form action="{{ path('app_student_display') }}" method="get">
+       <label for="filter">Search</label>
+       <input name="filter" type="text">
+       <button type="submit" class="btn btn-default btn-sm">Serach</button>
+    </form>
+</div>
+<div>
+   <table class = "table" align= "center">
+<tr>
+<th>NAME</th>
+<th>EMAIL</th>
+<th>PHONE</th>
+<th>AGE</th>
+<th>ACTION</th>
+</tr>
+<tr>
+      {% for x in pagination %}
+      <tr>
+         <td>{{ x.name }}</td>
+         <td>{{ x.email }}</td>
+         <td>{{ x.phone }}</td>
+         <td> {{ x.age }}</td>
+         <td><a href = "{{ path('app_student_update', { 'id' : x.Id }) }}"><button>EDIT</button></a>
+             <a href = "{{ path('app_student_delete', { 'id' : x.Id }) }}"><button>DELETE</button></a>
+         </td>
+      </tr>
+</div>
+      {% endfor %}
+</table>
+<div class="navigation">
+    {{ knp_pagination_render(pagination) }}
+</div>
+{% endblock %}
+
